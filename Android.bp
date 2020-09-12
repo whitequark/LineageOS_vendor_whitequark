@@ -1,0 +1,11 @@
+soong_namespace {
+}
+
+android_app_import {
+  name: "F-Droid",
+  apk: "app/F-Droid.apk",
+  presigned: true,
+  dex_preopt: {
+    enabled: false,
+  },
+}
