@@ -1,0 +1,15 @@
+project frameworks/base/
+diff --git a/core/java/android/content/pm/PackageParser.java b/core/java/android/content/pm/PackageParser.java
+index 535a8bc9db7..44a0e5e888e 100644
+--- a/core/java/android/content/pm/PackageParser.java
++++ b/core/java/android/content/pm/PackageParser.java
+@@ -3465,8 +3465,7 @@ public class PackageParser {
+                     outError);
+         }
+ 
+-        boolean allowBackup = sa.getBoolean(
+-                com.android.internal.R.styleable.AndroidManifestApplication_allowBackup, true);
++        boolean allowBackup = true;
+         if (allowBackup) {
+             ai.flags |= ApplicationInfo.FLAG_ALLOW_BACKUP;
+ 
