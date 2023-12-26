@@ -10,7 +10,3 @@ ota_from_target_files \
   -k vendor/extra/security/releasekey \
   signed-target_files.zip \
   signed-ota_update.zip
-
-img_from_target_files \
-  signed-target_files.zip \
-  signed-img.zip

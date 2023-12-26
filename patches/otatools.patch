@@ -1,0 +1,16 @@
+
+project build/make/
+diff --git a/tools/releasetools/sign_target_files_apks.py b/tools/releasetools/sign_target_files_apks.py
+index 089d8f7455..59a10826a5 100755
+--- a/tools/releasetools/sign_target_files_apks.py
++++ b/tools/releasetools/sign_target_files_apks.py
+@@ -919,7 +919,7 @@ def WriteOtacerts(output_zip, filename, keys):
+
+ def ReplaceOtaKeys(input_tf_zip, output_tf_zip, misc_info):
+   try:
+-    keylist = input_tf_zip.read("META/otakeys.txt").split()
++    keylist = input_tf_zip.read("META/otakeys.txt").decode().split()
+   except KeyError:
+     raise common.ExternalError("can't read META/otakeys.txt from input")
+
+
